@@ -57,7 +57,7 @@ namespace AllYourPlates.Mock
 
                 catch (WebException ex)
                 {
-                    //add error logging her
+                    throw ex;
                 }
                 
 
