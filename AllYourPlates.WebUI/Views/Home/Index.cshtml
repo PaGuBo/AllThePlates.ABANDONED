@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<h1><a href="/Pasha">Pasha</a></h1>
+<h2>Index</h2>
+
+
+	@if (User.Identity.IsAuthenticated)
+    {
+	<p><b>You are already logged in!</b> Try visiting the @Html.ActionLink("Members Only", "Index", "User") area. </p>
+	}
+    else
+    {
+	<p>Visit the @Html.ActionLink("Members Only", "Index", "User") area to trigger a login. </p>
+	}
+
+
+
+
+
+
+	@if (ViewData["Message"] != null)
+    {
+	<div style="border: solid 1px red">
+		@Html.Encode(ViewData["Message"].ToString())
+	</div>
+	}
+	<p>You must log in before entering the Members Area: </p>
+	@*<form action="Authenticate?ReturnUrl=@HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"])" method="post">*@
+    <form action="/Authenticate" method="post">
+	<label for="openid_identifier">OpenID: </label>
+	<input id="openid_identifier" name="openid_identifier" size="40" />
+	<input type="submit" value="Login" />
+	</form>
+
+	<script type="text/javascript">
+	    document.getElementById("openid_identifier").focus();
+	</script>

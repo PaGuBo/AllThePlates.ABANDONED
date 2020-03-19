@@ -1,0 +1,11 @@
+# Ignore file for Visual Studio 2008
+
+# use glob syntax
+syntax: glob
+
+[Bb]in/*
+[Oo]bj/*
+*.user
+*.suo
+TestResults/*
+AllYourPlates.WebUI/Photos/*

@@ -1,0 +1,8 @@
+[paths]
+default = https://pavelgutin@bitbucket.org/pavelgutin/allyourplates
+default = https://bitbucket.org/pavelgutin/allyourplates
+
+[auth]
+bb1.prefix = https://bitbucket.org/pavelgutin/allyourplates
+bb1.username = pavelgutin
+bb1.password = s4gj3GZypM

@@ -1,0 +1,18 @@
+﻿@using AllYourPlates.WebUI.HtmlHelpers
+@model AllYourPlates.WebUI.Models.UsersListViewModel
+
+@{
+    ViewBag.Title = "Users";
+    
+}
+<ul>
+
+
+@foreach (var p in Model.Users)
+{
+    Html.RenderPartial("UserSummary", p);
+}
+</ul>
+@*<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x , userName = Model.CurrentUser}))
+</div>*@
